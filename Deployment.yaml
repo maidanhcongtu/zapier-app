@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v6
 kind: Deployment
 metadata:
   name: zapier-deployment
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: zapier-container
-        image: asia.gcr.io/mhdanh-hello-kubernete/zapier-jenkin:v1
+        image: asia.gcr.io/mhdanh-hello-kubernete/zapier-jenkin:v6
         # Add opening port
         ports:                                      #+
         - containerPort: 8080                       #+
@@ -23,7 +23,7 @@ spec:
         - containerPort: 9990                       #+
           name: http-admin                          #+
 ---
-apiVersion: v1
+apiVersion: v6
 kind: Service
 metadata:
   name: zapier-service
