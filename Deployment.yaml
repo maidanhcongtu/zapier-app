@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: zapier-container
-        image: asia.gcr.io/mhdanh-hello-kubernete/zapier-jenkin:v6
+        image: asia.gcr.io/mhdanh-hello-kubernete/zapier-jenkin:v3
         # Add opening port
         ports:                                      #+
         - containerPort: 8080                       #+
