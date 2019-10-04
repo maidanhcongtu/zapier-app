@@ -3,7 +3,7 @@ package com.mhdanh.zapier.api;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-@Path("hello-world-two")
+@Path("hello-world-three")
 public class HelloworldAPI {
 
 	@GET
