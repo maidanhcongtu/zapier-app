@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zapier-latest-deployment
+  #namespace: mhdanh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:              # tells what pods the deployment will apply to, refer to line number 11 for pod template
+      app: zapier-latest
+  template:                   # actually, this is the pod template, describes a pod that is launched
+    metadata:
+      labels:
+        app: zapier-latest # this should match with the matchLabels value above, otherwise, this kind of pod will not be controlled by the above deployment
+    spec:
+      containers:
+      - name: zapier-latest-container
+        image: asia.gcr.io/mhdanh-hello-kubernete/zapier-jenkin
+        # Add opening port
+        ports:                                      #+
+        - containerPort: 8080                       #+
+          name: http                                #+
+        - containerPort: 9990                       #+
+          name: http-admin                          #+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zapier-latest-service
+  #namespace: mhdanh
+spec:
+  type: LoadBalancer
+#  type: NodePort
+  selector:
+    app: zapier-latest
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
