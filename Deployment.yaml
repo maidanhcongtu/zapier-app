@@ -34,6 +34,6 @@ spec:
   selector:
     app: zapier
   ports:
-  - port: 9990
-    targetPort: 9990
+  - port: 80
+    targetPort: 8080
     protocol: TCP
