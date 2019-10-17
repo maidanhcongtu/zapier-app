@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: anapp-container
-        image: eu.gcr.io/klara-tryout/anapp:latest
+        image: eu.gcr.io/klara-tryout/anapp
         imagePullPolicy: Always
         # Add opening port
         ports:                                      #+
