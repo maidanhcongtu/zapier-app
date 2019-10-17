@@ -8,6 +8,6 @@ public class HelloworldAPI {
 
 	@GET
 	public String sayHello() {
-		return "helloan2";
+		return "helloan3";
 	}
 }
