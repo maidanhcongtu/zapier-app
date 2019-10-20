@@ -1,2 +1,2 @@
 steps:
-  - cmd: devday/hello-world:v1
+  - cmd: devday.azurecr.io/hello-world:v1
