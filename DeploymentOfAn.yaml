@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: anapp-container
-        image: playaroundacr.azurecr.io/kuannapp
+        image: eu.gcr.io/klara-tryout/anapp
         # Add opening port
         ports:                                      #+
         - containerPort: 8080                       #+
